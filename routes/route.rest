@@ -1,0 +1,97 @@
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:3000/users/register
+Content-Type: application/json 
+
+{
+"username":"tres",
+"password":"1234"
+}
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json 
+
+{
+"username":"dos",
+"password":"1234"
+}
+
+
+###
+
+GET http://localhost:3000/users/6016b9f21bf9f8264015daed
+
+
+###
+
+DELETE http://localhost:3000/users/600f2f5b78131012ecb82725
+
+###
+
+POST http://localhost:3000/deck
+Content-Type: application/json 
+
+{
+    "title":"cuarto  mazo",
+    "description":"Geografía",
+    "creator":"6016bde296e1ac5bc0d60ce2"
+
+
+
+}
+
+###
+
+GET http://localhost:3000/deck
+
+
+
+
+###
+
+DELETE http://localhost:3000/deck/6016bdf396e1ac5bc0d60ce3
+
+###
+
+//get mazo from user id
+GET http://localhost:3000/deck/user/6016b9f21bf9f8264015daed
+###
+
+
+
+
+
+###
+
+POST http://localhost:3000/question
+Content-Type: application/json 
+
+{
+    
+    "description":"ali baba 3",
+    "answer":"2",
+    "deck":"6016bdf396e1ac5bc0d60ce3",
+    "creator":"6016bd9596e1ac5bc0d60ce1"
+
+
+
+}
+###
+
+GET http://localhost:3000/question/user/600d80729ddff0078955596d
+
+###
+
+DELETE  http://localhost:3000/question/6016c67fe0e9e62fe8e194d8
+
+###
+
+GET http://localhost:3000/question/deck/6016bd8e96e1ac5bc0d60ce0
+
+###
+
+
