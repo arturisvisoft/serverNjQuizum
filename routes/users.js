@@ -69,7 +69,7 @@ router.post("/register", async (req, res) => {
 
         res.json({
         ok: true,
-        id: userDB,
+        user: userDB,
         token1,
         })
   });

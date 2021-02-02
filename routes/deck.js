@@ -39,9 +39,17 @@ router.post("/", async (req, res) => {
     });
     try {
       const newDeck = await deck.save();
-      res.status(201).json({ newDeck });
+      res.status(201).json({
+        ok: true,
+        user: newDeck,
+        })
+
     } catch (err) {
-      res.status(400).json({ message: err.message });
+      res.status(400).json({
+        ok: false,
+        message: err.message,
+        })
+      
     }
   });
 

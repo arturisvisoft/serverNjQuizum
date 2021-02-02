@@ -36,7 +36,7 @@ POST http://localhost:3000/deck
 Content-Type: application/json 
 
 {
-    "title":"cuarto  mazo",
+    "title":"sexto  mazo",
     "description":"Geografía",
     "creator":"6016bde296e1ac5bc0d60ce2"
 
@@ -58,7 +58,7 @@ DELETE http://localhost:3000/deck/6016bdf396e1ac5bc0d60ce3
 ###
 
 //get mazo from user id
-GET http://localhost:3000/deck/user/6016b9f21bf9f8264015daed
+GET http://localhost:3000/deck/user/6016bde296e1ac5bc0d60ce2
 ###
 
 
