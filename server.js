@@ -6,13 +6,17 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 
 
+const DATABASE_URL = "mongodb://localhost/users"
+
+const PORT = "3000"
+
 //Rutas
 const usersRouter = require("./routes/users");
 const deckRouter = require("./routes/deck");
 const questionRouter = require("./routes/question");
 
 //Conexión a MongoDB
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true,  useUnifiedTopology: true  }); 
+mongoose.connect(DATABASE_URL, { useNewUrlParser: true,  useUnifiedTopology: true  }); 
 const db = mongoose.connection;
 db.on("error", error => console.log(error));
 db.once("open", () => console.log("connection to db established"));
@@ -24,6 +28,6 @@ app.use("/users", usersRouter);
 app.use("/deck", deckRouter);
 app.use("/question", questionRouter);
 
-// app.listen(process.env.PORT, () => console.log(`server has started at port ${process.env.PORT}`));
+app.listen(PORT, () => console.log(`server has started at port ${PORT}`));
 
-app.listen(80, '0.0.0.0');
+// app.listen(80, '0.0.0.0');
