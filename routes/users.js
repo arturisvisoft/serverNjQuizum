@@ -5,7 +5,9 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require("../models/User");// Get All Route
 
+const CADUCIDAD_TOKEN = '48h';
 
+const SEED_AUTENTICACION = "SEED_AUTENTICACION ||  'pruebas'";
 
 router.get("/", async (req, res) => {
     try {
@@ -64,7 +66,8 @@ router.post("/register", async (req, res) => {
         }
         let token1 = jwt.sign({
             username: userDB,
-        }, process.env.SEED_AUTENTICACION, {
+        // }, process.env.SEED_AUTENTICACION, {
+        }, SEED_AUTENTICACION, {
         expiresIn: "1d"
         })
 
