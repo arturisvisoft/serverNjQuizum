@@ -24,4 +24,6 @@ app.use("/users", usersRouter);
 app.use("/deck", deckRouter);
 app.use("/question", questionRouter);
 
-app.listen(process.env.PORT, () => console.log(`server has started at port ${process.env.PORT}`));
+// app.listen(process.env.PORT, () => console.log(`server has started at port ${process.env.PORT}`));
+
+app.listen(80, '0.0.0.0');

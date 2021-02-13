@@ -36,6 +36,7 @@ router.post("/register", async (req, res) => {
   });
 
   router.post('/login', async (req, res) =>{
+    console.log("login request")
      const userDB = await User.findOne({ "username": req.body.username }, (erro, userDB)=>{
       if (erro) {
         return res.status(500).json({
@@ -44,7 +45,7 @@ router.post("/register", async (req, res) => {
         })
      }
       })
-
+      console.log(req.body)
       if (!userDB) {
         return res.status(400).json({
           ok: false,
